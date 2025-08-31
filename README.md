@@ -1,2 +1,15 @@
 # Enajori
-🌸 Enajori – Handloom E-Commerce Website  Enajori is a modern handloom e-commerce website built using HTML, CSS, and JavaScript, designed to give users a seamless shopping experience while highlighting the elegance of traditional handloom products.  ✨ Features  🖤 Modern, aesthetic design with a cute business model theme.  📌 Sticky centered navigation bar for easy access.  🎭 Smooth UI animations for an engaging experience.  🛍️ Product showcase with filtering options.  💬 Testimonials section for customer trust.  📱 Fully responsive across devices.  📲 Contact section with Instagram, WhatsApp, and Email integration.  🛠️ Tech Stack  Frontend: HTML5, CSS3, JavaScript  Design: Modern UI/UX with animations  Responsive Design: Works on desktop, tablet, and mobile  🎯 Purpose  Enajori is crafted to promote Indian handloom culture by providing artisans with a digital storefront that combines tradition with modern web aesthetics.
+🌸 Enajori – Handloom E-Commerce Website  Enajori is a modern handloom e-commerce website built using HTML, CSS, and JavaScript, designed to give users a seamless shopping experience while highlighting the elegance of traditional handloom products.  
+✨ Features  
+🖤 Modern, aesthetic design with a cute business model theme.  
+📌 Sticky centered navigation bar for easy access.  
+🎭 Smooth UI animations for an engaging experience.  
+🛍️ Product showcase with filtering options.  
+💬 Testimonials section for customer trust.  
+📱 Fully responsive across devices.  
+📲 Contact section with Instagram, WhatsApp, and Email integration.  
+🛠️ Tech Stack  Frontend: HTML5, CSS3, JavaScript  
+
+Design: Modern UI/UX with animations  
+Responsive Design: Works on desktop, tablet, and mobile  
+🎯 Purpose  Enajori is crafted to promote Indian handloom culture by providing artisans with a digital storefront that combines tradition with modern web aesthetics.
