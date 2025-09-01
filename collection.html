@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enajori - Full Collection</title>
+  <link rel="stylesheet" href="collection.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta name="description" content="Explore Enajori's complete collection of handloom textiles and artisan crafts.">
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-spinner">
+      <div class="spinner"></div>
+      <p>Loading Collection...</p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <i class="fas fa-leaf"></i>
+        Enajori
+      </div>
+      <a href="index.html" class="btn-back">
+        <i class="fas fa-arrow-left"></i>
+        Back to Home
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="collection-hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Our Complete Collection</h1>
+      <p class="hero-subtitle">Each piece, a story handwoven with love</p>
+      <div class="collection-stats">
+        <div class="stat-item">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Unique Items</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Handmade</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Artisans</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter Section -->
+  <section class="filter-section">
+    <div class="container">
+      <div class="filter-controls">
+        <h3>Filter Products</h3>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All Items</button>
+          <button class="filter-btn" data-filter="crochet">Crochet</button>
+          <button class="filter-btn" data-filter="brooch">Brooches</button>
+          <button class="filter-btn" data-filter="decor">Home Décor</button>
+          <button class="filter-btn" data-filter="earings">Earings</button>
+        </div>
+        <div class="sort-controls">
+          <select id="sort-select">
+            <option value="default">Sort by Default</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="name">Name A-Z</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collection Grid -->
+  <section class="collection">
+    <div class="container">
+      <div class="collection-grid" id="collection-grid">
+        <!-- Product 1 -->
+        <div class="product-card" data-category="crochet" data-price="439" data-name="Mini Bloom Crochet Tulip Pot">
+          <div class="product-image">
+            <img src="items/tikla.jpg" alt="Mini Bloom Crochet Tulip Pot" loading="lazy">
+            <div class="product-overlay">
+              <button class="product-view-btn" onclick="openLightbox('items/tikla.jpg', 'Mini Bloom Crochet Tulip Pot')">
+                <i class="fas fa-eye"></i>
+              </button>
+              <button class="product-wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-badge">Featured</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Mini Bloom Crochet Tulip Pot</h3>
+            <p class="product-description">An adorable pink tulip rising from a tiny crocheted pot, complete with textured soil and vibrant green leaves—this cheerful tabletop décor symbolizes joy and renewal.</p>
+            <div class="product-footer">
+              <span class="product-price">₹439</span>
+              <button class="btn-primary" onclick="buyNow('Mini Bloom Crochet Tulip Pot', '₹439')">
+                <i class="fas fa-shopping-cart"></i>
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card" data-category="brooch" data-price="299" data-name="Blooming Love Brooch">
+          <div class="product-image">
+            <img src="rose.jpg" alt="Blooming Love Brooch" loading="lazy">
+            <div class="product-overlay">
+              <button class="product-view-btn" onclick="openLightbox('rose.jpg', 'Blooming Love Brooch')">
+                <i class="fas fa-eye"></i>
+              </button>
+              <button class="product-wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-badge">Popular</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Blooming Love Brooch</h3>
+            <p class="product-description">A gorgeous handcrafted brooch featuring a full red rose, delicate white daisies, and lush green leaves—all beautifully crocheted with a pearl center.</p>
+            <div class="product-footer">
+              <span class="product-price">₹299</span>
+              <button class="btn-primary" onclick="buyNow('Blooming Love Brooch', '₹299')">
+                <i class="fas fa-shopping-cart"></i>
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <!-- <div class="product-card" data-category="decor" data-price="249" data-name="Blue Circular Tassel Hanger">
+          <div class="product-image">
+            <img src="items/ring.jpg" alt="Blue Circular Tassel Hanger" loading="lazy">
+            <div class="product-overlay">
+              <button class="product-view-btn" onclick="openLightbox('items/ring.jpg', 'Blue Circular Tassel Hanger')">
+                <i class="fas fa-eye"></i>
+              </button>
+              <button class="product-wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-badge">New</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Blue Circular Tassel Hanger</h3>
+            <p class="product-description">Striking circular crochet piece featuring earthy brown, vibrant green, white, and deep blue—finished with a playful blue tassel for hanging.</p>
+            <div class="product-footer">
+              <span class="product-price">₹249</span>
+              <button class="btn-primary" onclick="buyNow('Blue Circular Tassel Hanger', '₹249')">
+                <i class="fas fa-shopping-cart"></i>
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- Product 4 -->
+        <div class="product-card" data-category="textile" data-price="1299" data-name="Soft Cotton Dupatta">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1620207418302-439b387441b0" alt="Soft Cotton Dupatta" loading="lazy">
+            <div class="product-overlay">
+              <button class="product-view-btn" onclick="openLightbox('https://images.unsplash.com/photo-1620207418302-439b387441b0', 'Soft Cotton Dupatta')">
+                <i class="fas fa-eye"></i>
+              </button>
+              <button class="product-wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Soft Cotton Dupatta</h3>
+            <p class="product-description">Handwoven cotton dupatta with traditional patterns, perfect for ethnic wear and special occasions.</p>
+            <div class="product-footer">
+              <span class="product-price">₹1,299</span>
+              <button class="btn-primary" onclick="buyNow('Soft Cotton Dupatta', '₹1,299')">
+                <i class="fas fa-shopping-cart"></i>
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card" data-category="textile" data-price="1499" data-name="Multicolor Wrap">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1630401630970-e37dc5eecf33" alt="Multicolor Wrap" loading="lazy">
+            <div class="product-overlay">
+              <button class="product-view-btn" onclick="openLightbox('https://images.unsplash.com/photo-1630401630970-e37dc5eecf33', 'Multicolor Wrap')">
+                <i class="fas fa-eye"></i>
+              </button>
+              <button class="product-wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Multicolor Wrap</h3>
+            <p class="product-description">Vibrant multicolor handwoven wrap, versatile and stylish for any season.</p>
+            <div class="product-footer">
+              <span class="product-price">₹1,499</span>
+              <button class="btn-primary" onclick="buyNow('Multicolor Wrap', '₹1,499')">
+                <i class="fas fa-shopping-cart"></i>
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card" data-category="textile" data-price="3200" data-name="Assam Handloom Saree">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1602810311125-9eac7a08f0ee" alt="Assam Handloom Saree" loading="lazy">
+            <div class="product-overlay">
+              <button class="product-view-btn" onclick="openLightbox('https://images.unsplash.com/photo-1602810311125-9eac7a08f0ee', 'Assam Handloom Saree')">
+                <i class="fas fa-eye"></i>
+              </button>
+              <button class="product-wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-badge">Premium</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Assam Handloom Saree</h3>
+            <p class="product-description">Traditional Assam handloom saree with intricate patterns, representing the rich cultural heritage of the region.</p>
+            <div class="product-footer">
+              <span class="product-price">₹3,200</span>
+              <button class="btn-primary" onclick="buyNow('Assam Handloom Saree', '₹3,200')">
+                <i class="fas fa-shopping-cart"></i>
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Load More Button -->
+      <div class="load-more-container">
+        <button class="btn-secondary" id="load-more-btn">
+          <i class="fas fa-plus"></i>
+          Load More Products
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-content">
+        <h3>Stay Updated</h3>
+        <p>Get notified about new arrivals and exclusive offers</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit" class="btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-brand">
+            <div class="brand">
+              <i class="fas fa-leaf"></i>
+              Enajori
+            </div>
+            <p>Preserving traditions, creating tomorrow.</p>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/_enajori25_/?hl=en" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/919999999999" target="_blank">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:enajorimadetomake25@gmail.com">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Enajori. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Image Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close">
+        <i class="fas fa-times"></i>
+      </button>
+      <img id="lightbox-image" src="" alt="">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" id="scroll-to-top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="collection.js"></script>
+
+</body>
+
+</html>
